@@ -16,7 +16,7 @@ class KeysControllerTest < ActionDispatch::IntegrationTest
     stub_request(:post, request_url).
       to_return(body: "12345678")
 
-    sign_in_as(@user)
+    sign_in_as(@user.username)
     post keys_generate_url format: 'json'
     assert_response :success, {key: "12345678"}
   end

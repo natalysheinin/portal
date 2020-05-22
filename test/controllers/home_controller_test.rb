@@ -11,7 +11,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "when logged in as staff you get index" do
-    sign_in_as(@user)
+    sign_in_as(@user.username)
     get home_index_url
     assert_response :success
   end

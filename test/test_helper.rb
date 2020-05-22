@@ -9,7 +9,7 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  def sign_in_as(user)
-    session[:user_id] = user.id
+  def sign_in_as(username)
+    post sessions_url, params: { username: username, password: 'secret' }
   end
 end

@@ -17,7 +17,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should clear session and redirect on logout" do
-    sign_in_as(@user)
+    sign_in_as(@user.username)
     get logout_url
     assert_redirected_to login_url
     assert session[:user_id] == nil
