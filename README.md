@@ -59,6 +59,20 @@ And now you can visit the site with the URL http://localhost:3000
 
 The default username and password is `admin@covidshield.app` and `password`.
 
+## Testing
+
+### Unit tests
+
+```ruby
+bin/rails test
+```
+
+### System tests
+
+```ruby
+bin/rails test:system
+```
+
 ## Who built COVID Shield?
 
 We are a group of Shopify volunteers who want to help to slow the spread of COVID-19 by offering our

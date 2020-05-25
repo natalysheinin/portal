@@ -10,7 +10,6 @@ class ActiveSupport::TestCase
   fixtures :all
 
   def sign_in_as(username)
-    https!
     post sessions_url, params: { username: username, password: 'secret' }
   end
 end
